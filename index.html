@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded Loyalty Prototype</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    background: #0F172A; min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .label { font-size: 12px; font-weight: 700; color: #64748B;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  h1 { font-size: 28px; font-weight: 800; color: #F1F5F9;
+    letter-spacing: -0.5px; text-align: center; margin-bottom: 8px; }
+  .subtitle { font-size: 15px; color: #64748B; text-align: center;
+    max-width: 420px; line-height: 1.6; margin-bottom: 48px; }
+  .cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .card {
+    background: #1E293B; border: 1px solid #334155;
+    border-radius: 20px; padding: 28px 24px;
+    width: 280px; text-decoration: none;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); }
+  .card.v1:hover { border-color: #FF6B35; }
+  .card.v2:hover { border-color: #4F46E5; }
+  .card-tag {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .v1 .card-tag { background: rgba(255,107,53,0.15); color: #FF6B35; }
+  .v2 .card-tag { background: rgba(79,70,229,0.15); color: #818CF8; }
+  .card-title { font-size: 18px; font-weight: 800; color: #F1F5F9; margin-bottom: 8px; }
+  .card-desc { font-size: 13px; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; }
+  .card-features { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 24px; }
+  .card-features li { font-size: 12px; color: #94A3B8; display: flex; align-items: center; gap: 7px; }
+  .card-features li::before { content: "✓"; font-weight: 700; }
+  .v1 .card-features li::before { color: #FF6B35; }
+  .v2 .card-features li::before { color: #818CF8; }
+  .card-cta {
+    display: block; text-align: center; padding: 12px;
+    border-radius: 12px; font-size: 14px; font-weight: 700;
+    text-decoration: none; transition: opacity 0.15s;
+  }
+  .v1 .card-cta { background: #FF6B35; color: white; }
+  .v2 .card-cta { background: #4F46E5; color: white; }
+  .footer { margin-top: 40px; font-size: 12px; color: #475569; text-align: center; }
+</style>
+</head>
+<body>
+  <p class="label">Product Management Portfolio</p>
+  <h1>Embedded Loyalty Prototype</h1>
+  <p class="subtitle">
+    A two-phase product prototype exploring how contextual loyalty
+    experiences drive repeat ordering in a food delivery app.
+  </p>
+
+  <div class="cards">
+    <a class="card v1" href="v1.html">
+      <span class="card-tag">Phase 3 · Foundations</span>
+      <div class="card-title">Integrated Loyalty</div>
+      <p class="card-desc">Loyalty embedded across the full ordering journey — visible at every touchpoint.</p>
+      <ul class="card-features">
+        <li>Inline points estimator</li>
+        <li>One-tap reward redemption</li>
+        <li>Real-time cart calculator</li>
+        <li>Post-order confirmation</li>
+        <li>Spend threshold nudges</li>
+      </ul>
+      <span class="card-cta">View Phase 3 Prototype →</span>
+    </a>
+
+    <a class="card v2" href="v2.html">
+      <span class="card-tag">Phase 3 + AI · Intelligence</span>
+      <div class="card-title">AI-Powered Rewards</div>
+      <p class="card-desc">An AI layer that detects context, predicts intent, and acts before the user has to think.</p>
+      <ul class="card-features">
+        <li>Predictive churn nudge</li>
+        <li>Smart basket suggestion</li>
+        <li>Natural language assistant</li>
+        <li>Personalised to order history</li>
+        <li>Everything in Phase 3</li>
+      </ul>
+      <span class="card-cta">View AI Prototype →</span>
+    </a>
+  </div>
+
+  <p class="footer">Built as a product prototype · Not a live product</p>
+</body>
+</html>
